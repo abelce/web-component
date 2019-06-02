@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./main.js"></script>
+    </head>
+    <body>
+        <template id="custome-fieldset">
+            <style>
+                fieldset {
+                    border: none;
+                    border-top: 1px solid #cccccc;
+                }
+            </style>
+            <fieldset>
+                <legend align="center">
+                    <slot name="title">custome fieldset</slot>
+                </legend>
+                <slot name="content">this is a paragraph</slot>
+            </fieldset>
+        </template>
+        <custome-fieldset>
+            <span slot="title">Hello world</span>
+            <p slot="content">This is content</p>
+        </custome-fieldset>
+
+        <custome-fieldset>
+            <span slot="title">list</span>
+            <dl slot="content">
+                <dt>name</dt>
+                <dd>Abelce</dd>
+            </dl>
+            <dl slot="content">
+                <dt>sex</dt>
+                <dd>male</dd>
+            </dl>
+        </custome-fieldset>
+
+    </body>
+</html>
